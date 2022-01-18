@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    font: 11pt sans-serif;
+}
+
+ul {
+    padding: 0;
+}
+
+header {
+    display: flex;
+}
+
+a, a:visited {
+    color: black;
+    display: block;
+    text-decoration: none;
+}
+
+details:hover {
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+    text-indent: 30pt;
+}
+
+.red_button {
+    cursor: pointer;
+    border: 2px solid red;
+    padding: 5pt 20pt;
+    background: white;
+    color: red;
+    margin: 5pt;
+}
+
+.red_button:hover {
+    background: red;
+    color: white;
+}
+
+.header_menu {
+    margin: 5pt auto;
+    display: flex;
+    border: 2px solid black;
+}
+
+.header_menu a {
+    padding: 5pt;
+}
+
+.header_menu a:hover {
+    cursor: pointer;
+    background: lightgreen;
+}
+
+.header_menu li {
+    text-align: center;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+.bg {
+    border-left: 2px solid black;
+}
+
+.li_text {
+    padding: 5pt;
+}
+
+.flashes {
+    margin: 0;
+    list-style-type: none;
+    position: absolute;
+    right: 0pt;
+    top: 50pt;
+    background: #ffe0e6;
+}
+
+.flashes li {
+    padding: 5pt 10pt;
+    border-bottom: 2px solid pink;
+}
+
+h2 {
+    margin: 0;
+    background: pink;
+    padding: 5pt 10pt;
+    font-size: 11pt;
+}
+
+.login {
+    line-height: 30pt;
+}
+
+.login form {
+
+}
+
+.login input {
+
+}
+
+#content {
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.text {
+    width: 600pt;
+}
+
+h1 {
+    margin: 0;
+    padding: 5pt;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+h3 {
+    margin: 10pt 0;
+    text-align: center;
+}
+
+.form_div {
+    margin: 5pt;
+    border: 2px solid black;
+    padding: 5pt;
+    height: min-content;
+}
+
+.form_div form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+input, select {
+    margin-bottom: 5pt;
+}
+
+details {
+    padding: 10pt;
+    border-bottom: 1px solid red;
+}
+
+.table_div {
+    border: 2px solid black;
+    margin: 5pt;
+    height: min-content;
+}
+
+.table_div table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table_div a, th {
+    text-align: center;
+    padding: 4pt;
+}
+
+.table_div tr:nth-child(odd) {
+    background: lightgreen;
+}
+
+.table_div tr:hover {
+    background: lightgrey;
+}
+
+.navigation_div {
+    background: tomato;
+}
+
+.navigation_div ul {
+    margin: 0;
+}
+
+.navigation_div li {
+    list-style-type: none;
+    display: table;
+    padding: 5pt;
+}
+
+.navigation_div a:hover {
+    color: maroon;
+}
+
+.text_div {
+    background: lightgrey;
+    padding: 15pt;
+}
+
+.object_info {
+    padding: 10pt;
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.info_table {
+    border: 2px solid black;
+    margin: 5pt;
+    height: fit-content;
+}
+
+.info_table td, caption {
+    padding: 5pt 10pt;
+}
+
+.info_table caption {
+    background: lightgreen;
+    border: 2px solid black;
+    border-bottom: none;
+}
