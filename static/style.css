@@ -55,7 +55,7 @@ p {
     background: lightgreen;
 }
 
-.header_menu li {
+li {
     text-align: center;
     list-style-type: none;
     box-sizing: border-box;
@@ -214,4 +214,8 @@ details {
     background: lightgreen;
     border: 2px solid black;
     border-bottom: none;
+}
+
+.div_b {
+    border-bottom: 2px solid black;
 }

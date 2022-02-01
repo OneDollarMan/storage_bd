@@ -12,8 +12,7 @@ STR_LEN = 45
 
 @app.route("/")
 def index():
-    return render_template('index.html', title="Главная",
-                           counts=[])
+    return render_template('index.html', title="Главная")
 
 
 @app.route("/login", methods=['GET', 'POST'])
@@ -174,9 +173,21 @@ def customers_remove(id):
     return redirect(url_for("customers"))
 
 
-@app.route("/sales")
+@app.route("/sales", methods=["GET", "POST"])
 def sales():
-    return render_template('sales.html', title="Продажи", sales=gr.get_sales(), cs=gr.get_customers(), ps=gr.get_products())
+    if request.method == "POST":
+        s = request.form['start_date']
+        e = request.form['end_date']
+        c = request.form.get('customer')
+        if c:
+            c = int(c)
+        p = request.form.get('product')
+        if p:
+            p = int(p)
+        print(s, e, c, p)
+        return render_template('sales.html', title="Продажи", sales=gr.get_sales_sorted(s, e, c, p), cs=gr.get_customers(), ps=gr.get_products(),
+                               customer=c, product=p, start_date=s, end_date=e, pss=gr.select_products_sales())
+    return render_template('sales.html', title="Продажи", sales=gr.get_sales(), cs=gr.get_customers(), ps=gr.get_products(), pss=gr.select_products_sales())
 
 
 @app.route("/sales/<int:id>")

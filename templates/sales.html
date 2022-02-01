@@ -48,4 +48,42 @@
         {% endfor %}
     </table>
 </div>
+
+<div class="form_div">
+    <form method="post">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+        <h3>Сортировка по дате</h3>
+        <li>От <input type="datetime-local" name="start_date" value="{{ start_date }}"></li>
+        <li>До <input type="datetime-local" name="end_date" value="{{ end_date }}"></li>
+        <div class="div_b"></div>
+
+        <h3>Сортировка по покупателю</h3>
+        <select name="customer">
+            <option value="" selected>Выберите покупателя</option>
+            {% for c in cs %}
+                {% if c[0] == customer %}
+                    <option selected name="customer" value="{{c[0]}}">{{c[1]}}</option>
+                {% else %}
+                    <option name="customer" value="{{c[0]}}">{{c[1]}}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+        <div class="div_b"></div>
+
+        <h3>Сортировка по товару</h3>
+        <select name="product">
+            <option value="" selected>Выберите товар</option>
+            {% for p in pss %}
+                {% if p[0] == product %}
+                    <option selected name="product" value="{{p[0]}}">{{p[2]}}</option>
+                {% else %}
+                    <option name="product" value="{{p[0]}}">{{p[2]}}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+
+        <input type="submit" value="Показать">
+    </form>
+</div>
 {% endblock %}
